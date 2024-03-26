@@ -202,3 +202,4 @@ C:\Users\s28312\Desktop\zadanie_solution\LegacyAppTests\obj\Debug\net8.0\refint\
 C:\Users\s28312\Desktop\zadanie_solution\LegacyAppTests\obj\Debug\net8.0\LegacyAppTests.pdb
 C:\Users\s28312\Desktop\zadanie_solution\LegacyAppTests\obj\Debug\net8.0\LegacyAppTests.genruntimeconfig.cache
 C:\Users\s28312\Desktop\zadanie_solution\LegacyAppTests\obj\Debug\net8.0\ref\LegacyAppTests.dll
+C:\Users\s28312\Desktop\zadanie_solution\LegacyAppTests\obj\Debug\net8.0\LegacyAppTests.sourcelink.json
