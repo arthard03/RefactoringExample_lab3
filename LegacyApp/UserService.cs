@@ -1,29 +1,33 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace LegacyApp
 {
     public class UserService
     {
+        private readonly List<CheckUser> _checkUsers;
+        private readonly CreditCheck _creditCheck;
+
+        public UserService()
+        {
+            _checkUsers = new List<CheckUser>()
+            
+            {
+new CredentialCheck(),
+new EmailCheck(),
+new AgeCheck(),
+
+            };
+        }
+
         public bool AddUser(string firstName, string lastName, string email, DateTime dateOfBirth, int clientId)
         {
-            
-            if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName))
-            {
-                return false;
-            }
 
-            if (!email.Contains("@") && !email.Contains("."))
+            foreach (var VARIABLE in _checkUsers)
             {
-                return false;
-            }
+                if (!VARIABLE.check(this, firstName, lastName, email, dateOfBirth, clientId))
+                    return false;
 
-            var now = DateTime.Now;
-            int age = now.Year - dateOfBirth.Year;
-            if (now.Month < dateOfBirth.Month || (now.Month == dateOfBirth.Month && now.Day < dateOfBirth.Day)) age--;
-
-            if (age < 21)
-            {
-                return false;
             }
 
             var clientRepository = new ClientRepository();
@@ -37,6 +41,7 @@ namespace LegacyApp
                 FirstName = firstName,
                 LastName = lastName
             };
+            // _creditCheck.creditValidation(user,clientId);
 
             if (client.Type == "VeryImportantClient")
             {
@@ -56,7 +61,7 @@ namespace LegacyApp
                 int creditLimit = userCreditService.GetCreditLimit(user.LastName, user.DateOfBirth);
                 user.CreditLimit = creditLimit;
             }
-
+            
             if (user.HasCreditLimit && user.CreditLimit < 500)
             {
                 return false;

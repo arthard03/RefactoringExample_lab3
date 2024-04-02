@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LegacyApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8cdcfa43f14eb093f45dce36c5df1dfc4b610f4d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52c7eff65f63b8950561a97633a6e470d08e702e")]
 [assembly: System.Reflection.AssemblyProductAttribute("LegacyApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LegacyApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
